@@ -1,0 +1,65 @@
+body {
+  background: #222;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Board {
+  border: 5px solid black;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('../img/background_space.jpg');
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: Board-background-animation 40s linear infinite;
+}
+
+.Player {
+  z-index: 10;
+  position: relative;
+}
+
+.Enemy-image {
+  z-index: 1;
+  position: absolute;
+  animation: Enemy-image-spin infinite 1s linear;
+}
+
+@keyframes Enemy-image-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Board-background-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 10000px;
+  }
+}
