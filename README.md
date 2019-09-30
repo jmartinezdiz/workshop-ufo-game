@@ -17,3 +17,10 @@ With yarn:
 $ yarn install
 $ yarn start
 ```
+
+## Credits
+
+- Developed by Jouk and Sitoped
+- Template made with rpgui
+- Icon ufo made by Pixel Buddha from www.flaticon.com
+- Icon asteroid made by Freepik from www.flaticon.com
