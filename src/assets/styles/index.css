@@ -23,6 +23,20 @@ code {
   justify-content: center;
 }
 
+.Credits {
+  margin-top: 5px;
+  font-size: 6px;
+}
+
+.Credits ul {
+  padding-left: 20px;
+}
+
+.Credits li {
+  margin-left: 0px;
+  margin-bottom: -10px;
+}
+
 .Board {
   border: 5px solid black;
   border-radius: 10px;

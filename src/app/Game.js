@@ -52,10 +52,10 @@ class App extends React.Component {
           <hr />
           {this._renderGameOver()}
           <label>Tamaño de la ventana:</label>
-          <input type="number" value={this.state.size} onChange={(e) => this.setState({size: e.target.value})} />
+          <input type="text" value={this.state.size} onChange={(e) => this.setState({size: e.target.value})} />
           <br /><br />
           <label>Número de enemigos:</label>
-          <input type="number" value={this.state.enemiesCount} onChange={(e) => this.setState({enemiesCount: e.target.value})} />
+          <input type="text" value={this.state.enemiesCount} onChange={(e) => this.setState({enemiesCount: e.target.value})} />
           <br /><br />
           <button className="rpgui-button" style={{opacity: buttonDisabled && 0.5}} type="button" onClick={() => this._play()} disabled={buttonDisabled}>
             <span>Jugar</span>
@@ -96,12 +96,27 @@ class App extends React.Component {
     }
   }
 
+  _renderCredits() {
+    return (
+      <div className="Credits">
+        <hr />
+        <ul>
+          <li>Desarrollado por Jouk y Sitoped</li>
+          <li>Plantilla creada con rpgui</li>
+          <li>Icono ufo hecho por Pixel Buddha de www.flaticon.com</li>
+          <li>Icono asteroid hecho por Freepik Buddha de www.flaticon.com</li>
+        </ul>
+      </div>
+    );
+  }
+
   render()  {
     return (
       <div className="App rpgui-content">
         <div className="rpgui-container framed">
           {this._renderNewGame()}
           {this._renderGame()}
+          {this._renderCredits()}
         </div>
       </div>
     );
