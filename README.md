@@ -18,6 +18,12 @@ $ yarn install
 $ yarn start
 ```
 
+With docker:
+```shell
+$ docker build -t ufo-game .
+$ docker run -p 80:3000 ufo-game
+```
+
 ## Credits
 
 - Developed by Jouk and Sitoped
